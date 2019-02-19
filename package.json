@@ -5,7 +5,14 @@
     "start": "webpack-dev-server --mode development",
     "clean": "rimraf dist",
     "build": "run-s clean build:transpile",
-    "build:transpile": "webpack --mode production"
+    "build:transpile": "webpack --mode production",
+    "fmt": "prettier --write '**/*.{json,js,jsx,ts,tsx,md}' --ignore-path .gitignore",
+    "lint": "tslint --project tsconfig.json --fix",
+    "test": "run-p test:*",
+    "test:compile": "tsc --noEmit",
+    "test:fmt": "prettier --list-different '**/*.{json,js,jsx,ts,tsx,md}' --ignore-path .gitignore",
+    "test:lint": "tslint --project tsconfig.json",
+    "test:unit": "jest"
   },
   "devDependencies": {
     "@types/history": "^4.7.2",

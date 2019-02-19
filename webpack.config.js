@@ -17,10 +17,12 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new CopyPlugin([{
-      from: "node_modules/semantic-ui-css/semantic.min.css",
-      to: "assets/semantic.min.css"
-    }]),
+    new CopyPlugin([
+      {
+        from: "node_modules/semantic-ui-css/semantic.min.css",
+        to: "assets/semantic.min.css"
+      }
+    ]),
     new HtmlWebpackPlugin({
       template: "src/index.html",
       inject: true
