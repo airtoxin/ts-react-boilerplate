@@ -27,7 +27,7 @@ export interface CounterState {
 }
 
 const initialState: CounterState = {
-  count: 0,
+  count: 0
 };
 
 export interface IncrementAction extends AnyAction {
@@ -52,10 +52,15 @@ export const reset = (): ResetAction => ({
 
 export type CounterAction = IncrementAction | ResetAction;
 
-export const counter: Reducer<CounterState, CounterAction> = (state = initialState, action) => {
+export const counter: Reducer<CounterState, CounterAction> = (
+  state = initialState,
+  action
+) => {
   switch (action.type) {
-    case "counterPage/IncrementAction": return { ...state, count: state.count + action.payload.amount };
-    case "counterPage/ResetAction": return initialState;
+    case "counterPage/IncrementAction":
+      return { ...state, count: state.count + action.payload.amount };
+    case "counterPage/ResetAction":
+      return initialState;
     default:
       return state;
   }
@@ -65,6 +70,6 @@ export const CounterPage = connect<any, any, any, RootState>(
   state => ({ count: state.counter.count }),
   dispatch => ({
     onIncrement: (amount: number) => dispatch(increment(amount)),
-    onDecrement: () => dispatch(reset()),
+    onDecrement: () => dispatch(reset())
   })
 )(CounterPageComponent);
