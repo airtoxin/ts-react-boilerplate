@@ -40,7 +40,7 @@
     "typescript": "3.4.2",
     "webpack": "4.29.6",
     "webpack-cli": "3.3.0",
-    "webpack-dev-server": "3.2.1"
+    "webpack-dev-server": "3.3.0"
   },
   "dependencies": {
     "connected-react-router": "6.3.2",
