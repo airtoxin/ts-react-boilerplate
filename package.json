@@ -29,7 +29,7 @@
     "inline-environment-variables-webpack-plugin": "1.2.1",
     "jest": "24.8.0",
     "npm-run-all": "4.1.5",
-    "prettier": "1.18.0",
+    "prettier": "1.18.1",
     "rimraf": "2.6.3",
     "ts-jest": "24.0.2",
     "ts-loader": "5.4.5",
